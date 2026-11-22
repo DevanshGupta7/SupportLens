@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+.pytest_cache/
+artifacts*/
+data/
+*.pt
+.env
+htmlcov/
+.coverage
+run*/
