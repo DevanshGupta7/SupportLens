@@ -17,6 +17,6 @@ jobs:
       - name: Install CPU-only PyTorch (avoids the multi-GB CUDA build)
         run: pip install torch --index-url https://download.pytorch.org/whl/cpu
       - name: Install the rest
-        run: pip install numpy langchain-core langchain-groq crewai pytest
+        run: pip install numpy langchain-core langchain-groq crewai pytest pytest-cov
       - name: Run tests
         run: python -m pytest -q
