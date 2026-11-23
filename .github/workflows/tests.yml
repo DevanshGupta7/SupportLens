@@ -1,0 +1,22 @@
+name: tests
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      OTEL_SDK_DISABLED: "true"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install CPU-only PyTorch (avoids the multi-GB CUDA build)
+        run: pip install torch --index-url https://download.pytorch.org/whl/cpu
+      - name: Install the rest
+        run: pip install numpy langchain-core langchain-groq crewai pytest
+      - name: Run tests
+        run: python -m pytest -q

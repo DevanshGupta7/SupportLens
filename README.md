@@ -2,7 +2,7 @@
 
 **Classify customer-support tickets, find similar past tickets, and triage them with LangChain and CrewAI agents. Benchmarked honestly against a from-scratch NumPy baseline.**
 
-![python](https://img.shields.io/badge/python-3.10%2B-blue) ![pytorch](https://img.shields.io/badge/PyTorch-2.x-ee4c2c) ![tests](https://img.shields.io/badge/tests-26%20passing-brightgreen) ![license](https://img.shields.io/badge/license-MIT-lightgrey)
+![python](https://img.shields.io/badge/python-3.10%2B-blue) ![pytorch](https://img.shields.io/badge/PyTorch-2.x-ee4c2c) [![tests](https://github.com/DevanshGupta7/SupportLens/actions/workflows/tests.yml/badge.svg)](https://github.com/DevanshGupta7/SupportLens/actions/workflows/tests.yml) ![license](https://img.shields.io/badge/license-MIT-lightgrey)
 
 SupportLens takes messy, unstructured ticket text (HTML, emails, order numbers, typos), turns it into clean features, and does three things with it:
 
@@ -178,7 +178,6 @@ The tests cover text cleaning, TF-IDF, SVD, Naive Bayes, the statistics helpers,
 - A prompt-injection regression test (a ticket that tries to trigger an unlisted tool).
 - Results on the 27-class `intent` label and on a human-written ticket dataset.
 - Fine-tune a small pretrained model (Hugging Face, LoRA) and compare it with these baselines.
-- A CI workflow that runs the tests on every push.
 
 ## Project layout
 
